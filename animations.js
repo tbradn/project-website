@@ -37,3 +37,5 @@ window.addEventListener('scroll', () => {
         header.classList.remove('shrink');
     }
 });
+
+console.log("animations.js is loaded");
