@@ -16,6 +16,25 @@ header {
     text-align: center;
 }
 
+#night-sky .star {
+    --travel: 100vw;
+    --size: 1;
+}
+
+#night-sky .star {
+    position: relative;
+    filter: drop-shadow(0 0 6px lightseagreen);
+    opacity: 1;
+    width: calc(var(--size) * 2px);
+    height: calc(var(--size) * 100px);
+    transform: rotate(-45deg);
+    animation: shooting-star ease-in-out infinite;
+    animation-duration: var(==duration);
+    animation-delay: var(==delay);
+    top: var(--top);
+    left: var(--left);
+}
+
 .nav-links {
     list-style: none;
     padding: 0;
