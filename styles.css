@@ -21,8 +21,8 @@ header {
 
 #night-sky {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 200px;
+    left: 1277px;
     width: 1277px;
     height: 200px;
     pointer-events: none;
