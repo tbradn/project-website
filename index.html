@@ -67,6 +67,7 @@
         const nightSky = document.getElementById("night-sky");
 
         function createStar() {
+            console.log("Star created.");
             const star = document.createElement("div");
             star.className = "star";
             star.style.setProperty("--size", Math.random() * 2 + 1); // Random size
