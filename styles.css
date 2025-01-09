@@ -20,11 +20,11 @@ header {
 }
 
 #night-sky {
-    position: absolute;
-    top: 200px;
-    left: 1277px;
-    width: 1277px;
-    height: 200px;
+    position: dynamic;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
     z-index: 0;
     overflow: hidden; /* Confine stars within header */
