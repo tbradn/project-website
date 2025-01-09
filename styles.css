@@ -14,60 +14,6 @@ header {
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    position: relative;
-    overflow: hidden;
-    height: 200px; /* Ensure enough space for stars */
-}
-
-#night-sky {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 20%;
-    pointer-events: none;
-    z-index: 0;
-    overflow: hidden; /* Confine stars within header */
-}
-
-.header-content {
-    position: relative;
-    z-index: 1; /* Ensure text stays above the stars */
-}
-
-#night-sky .star {
-    --travel: 200%;
-    --size: 1;
-    --duration: 3s;
-    --delay: 0s;
-    --top: 50%;
-    --left: 50%;
-}
-
-#night-sky .star {
-    position: absolute;
-    filter: drop-shadow(0 0 6px lightseagreen);
-    opacity: 1;
-    width: calc(var(--size) * 2px);
-    height: calc(var(--size) * 100px);
-    transform: rotate(-45deg);
-    animation: shooting-star ease-in-out infinite;
-    animation-duration: var(--duration);
-    animation-delay: var(--delay);
-    top: var(--top);
-    left: var(--left);
-    background-color: lightseagreen;
-}
-
-@keyframes shooting-star {
-    0% {
-        transform: translate(0, 0) rotate(-45deg);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(calc(var(--travel) * -1), calc(var(--travel) / 2)) rotate(-45deg);
-        opacity: 0;
-    }
 }
 
 .nav-links {
