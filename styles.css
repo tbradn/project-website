@@ -27,6 +27,7 @@ header {
     height: 100%;
     pointer-events: none;
     z-index: 0;
+    overflow: hidden; /* Confine stars within header */
 }
 
 .header-content {
@@ -35,13 +36,12 @@ header {
 }
 
 #night-sky .star {
-    --travel: 100vw;
+    --travel: 200%;
     --size: 1;
     --duration: 3s;
     --delay: 0s;
     --top: 50%;
     --left: 50%;
-    background-color: red;
 }
 
 #night-sky .star {
@@ -56,7 +56,6 @@ header {
     animation-delay: var(--delay);
     top: var(--top);
     left: var(--left);
-    background-color: red;
 }
 
 @keyframes shooting-star {
