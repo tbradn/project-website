@@ -48,8 +48,8 @@ header {
     position: absolute;
     filter: drop-shadow(0 0 6px lightseagreen);
     opacity: 1;
-    width: calc(var(--size) * 2px);
-    height: calc(var(--size) * 100px);
+    width: 1277px;
+    height: 200px;
     transform: rotate(-45deg);
     animation: shooting-star ease-in-out infinite;
     animation-duration: var(--duration);
