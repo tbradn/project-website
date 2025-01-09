@@ -18,45 +18,6 @@ header {
     overflow: hidden;
 }
 
-#night-sky {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-#night-sky .star {
-    --travel: 100vw;
-    --size: 1;
-}
-
-#night-sky .star {
-    position: relative;
-    filter: drop-shadow(0 0 6px lightseagreen);
-    opacity: 1;
-    width: calc(var(--size) * 2px);
-    height: calc(var(--size) * 100px);
-    transform: rotate(-45deg);
-    animation: shooting-star ease-in-out infinite;
-    animation-duration: var(--duration);
-    animation-delay: var(--delay);
-    top: var(--top);
-    left: var(--left);
-}
-
-@keyframes shooting-star {
-    0% {
-        transform: translate(0, 0) rotate(-45deg);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(calc(var(--travel) * -1), calc(var(--travel) / 2)) rotate(-45deg);
-        opacity: 0;
-    }
-}
-
 .nav-links {
     list-style: none;
     padding: 0;
@@ -89,6 +50,45 @@ header {
 .header-content p {
     font-size: 1.2rem;
     font-weight: 300;
+}
+
+/* Night Sky Container */
+#night-sky {
+    position: fixed; /* Fixed position to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the stars behind all other content */
+    pointer-events: none; /* Prevent interaction with the star container */
+    overflow: hidden;
+}
+
+/* Shooting Star Styles */
+#night-sky .star {
+    position: absolute;
+    filter: drop-shadow(0 0 6px lightseagreen);
+    opacity: 1;
+    width: calc(var(--size) * 2px);
+    height: calc(var(--size) * 100px);
+    transform: rotate(-45deg);
+    animation: shooting-star ease-in-out infinite;
+    animation-duration: var(--duration);
+    animation-delay: var(--delay);
+    top: var(--top);
+    left: var(--left);
+}
+
+/* Shooting Star Animation */
+@keyframes shooting-star {
+    0% {
+        transform: translate(0, 0) rotate(-45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(calc(var(--size) * -100vw), calc(var(--size) * 50vh)) rotate(-45deg);
+        opacity: 0;
+    }
 }
 
 /* Section Styles */
