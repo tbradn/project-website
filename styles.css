@@ -56,6 +56,7 @@ header {
     animation-delay: var(--delay);
     top: var(--top);
     left: var(--left);
+    background-color: red;
 }
 
 @keyframes shooting-star {
